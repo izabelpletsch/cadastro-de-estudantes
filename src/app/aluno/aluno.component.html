@@ -1,0 +1,41 @@
+<div class="row">
+    <h2>Estudantes</h2>
+    <button class="add row">
+        <span class="material-icons" style="margin-right: 5px">add_circle</span>
+        Cadastrar Aluno</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Data de Nascimento</th>
+            <th>Curso</th>
+            <th>Semestre</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let aluno of alunos">
+            <td>{{aluno.id}}</td>
+            <td><a routerLink="/detail/{{aluno.id}}"> <input id="name" [(ngModel)]="aluno.nome" placeholder="name"></a> </td>
+            <td>{{aluno.sobrenome}}</td>
+            <td>{{aluno.datanascimento}}</td>
+            <td>{{aluno.curso}}</td>
+            <td>{{aluno.semestre}}</td>
+            <td>
+                <button class="edit" type="button" [class.selected]="aluno === selectedAluno"
+                    (click)="onSelect(aluno); modal.toggle()">
+                    <span class="material-icons">edit</span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<app-modal #modal>
+    <app-aluno-detail [aluno]="selectedAluno"></app-aluno-detail>
+</app-modal>

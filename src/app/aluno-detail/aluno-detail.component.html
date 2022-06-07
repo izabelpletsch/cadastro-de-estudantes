@@ -1,0 +1,23 @@
+<div *ngIf="aluno">
+
+    <h2>{{aluno.nome}} Details</h2>
+    <div><span>id: </span>{{aluno.id}}</div>
+    <div>
+      <label for="Aluno-name">Nome: </label>
+      <input id="Aluno-name" [(ngModel)]="aluno.nome" placeholder="nome">
+
+      <label for="Aluno-sobrenome">Sobrenome: </label>
+      <input id="Aluno-sobrenome" [(ngModel)]="aluno.sobrenome" placeholder="sobrenome">
+
+      <label for="Aluno-datanascimento">Data de Nascimento: </label>
+      <input id="Aluno-datanascimento" [(ngModel)]="aluno.datanascimento" placeholder="datanascimento">
+
+      <label for="Aluno-curso">Curso: </label>
+      <input id="Aluno-curso" [(ngModel)]="aluno.curso" placeholder="curso">
+
+      <label for="Aluno-semestre">Semestre: </label>
+      <input id="Aluno-semestre" [(ngModel)]="aluno.semestre" placeholder="semestre">
+    </div>
+
+    <button type="button" (click)="goBack()">go back</button>
+</div>

@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #e8e8e8;
+}
+
+::ng-deep body {
+  margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  background: #7f6a97;
+  padding: 5px;
+  border: 1px solid #5c4973;
+  color: #fff;
+}
+
+td {
+  border: 1px solid #a5a5a5;
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add {
+  height: 100%;
+  padding: 5px;
+  background: #96d097;
+  border: 1px solid #43a344;
+  border-radius: 5px;
+  color: #227123;
+  font-weight: bold;
+}
+
+.add:active {
+  background: #3d9746;
+  color: #fff;
+}
+
+.edit {
+  color: #2a3f79;
+  text-align: center;
+  background: #aed3f2;
+  border: 1px solid #5373a2;
+  border-radius: 5px;
+}
+
+.edit:active {
+  color: #fff !important;
+  text-align: center;
+  background: #2a3f79;
+  border: 1px solid #2a3f79;
+}
+
+.edit > span,
+.add > span {
+  font-size: 20px;
+}

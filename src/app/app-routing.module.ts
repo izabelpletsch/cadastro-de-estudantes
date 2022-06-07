@@ -1,7 +1,15 @@
+import { AlunoDetailComponent } from './aluno-detail/aluno-detail.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AlunoComponent } from './aluno/aluno.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'aluno', component: AlunoComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'detail/:id', component: AlunoDetailComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

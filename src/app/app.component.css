@@ -1,0 +1,38 @@
+.navbar {
+  background: #7faace;
+  padding: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar > span {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #2a3f79;
+}
+
+.sidemenu {
+  height: 100vh;
+  width: 20%;
+  background: white;
+}
+
+.content {
+  padding: 10px;
+  min-height: 80vh;
+}
+
+footer {
+  background: #ddd;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  line-height: 20px;
+  width: 100%;
+  align-items: center;
+  margin-top: 8px;
+}
